@@ -5,42 +5,42 @@
 class X < Formula
   desc "a simple and fast task runner"
   homepage "https://github.com/bambamboole/x"
-  version "0.1.0-rc5"
+  version "0.1.0-rc6"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/bambamboole/x/releases/download/0.1.0-rc5/x-0.1.0-rc5-darwin-amd64"
-      sha256 "af54dfbdcc2dde0ad53525458389a969eeb58d187e0a0361b5512698a96bc8a3"
+      url "https://github.com/bambamboole/x/releases/download/0.1.0-rc6/x-0.1.0-rc6-darwin-amd64"
+      sha256 "af70584c973ed4113a75ec46c9ed1f7f760825ade51689dafa29e8eb7882bc84"
 
       def install
-        bin.install "x-0.1.0-rc5-darwin-amd64" => "x"
+        bin.install "x"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/bambamboole/x/releases/download/0.1.0-rc5/x-0.1.0-rc5-darwin-arm64"
-      sha256 "f2ec96e45dfac5766f706c410fc59e39bbe2bbb0ef160a5f37b2bd69e3608d25"
+      url "https://github.com/bambamboole/x/releases/download/0.1.0-rc6/x-0.1.0-rc6-darwin-arm64"
+      sha256 "e7c2ff127c601f626686c97071a9aa40941f43d49997bf8b800843cf9394b181"
 
       def install
-        bin.install "x-0.1.0-rc5-darwin-arm64" => "x"
+        bin.install "x"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bambamboole/x/releases/download/0.1.0-rc5/x-0.1.0-rc5-linux-arm64"
-      sha256 "e33aca2b65b68f53ae16fe4a0549013624f808f0f644017605a483ee5082f7bc"
+      url "https://github.com/bambamboole/x/releases/download/0.1.0-rc6/x-0.1.0-rc6-linux-arm64"
+      sha256 "c0d1f9f39f8b903b313d7acf47cb959163efcf2e2598e93b2e52641bc92a71ef"
 
       def install
-        bin.install "x-0.1.0-rc5-linux-arm64" => "x"
+        bin.install "x"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bambamboole/x/releases/download/0.1.0-rc5/x-0.1.0-rc5-linux-amd64"
-      sha256 "6be1cddfe0ea5501f026c42206e46158a1e2243b360e105a998e8fc207ae0104"
+      url "https://github.com/bambamboole/x/releases/download/0.1.0-rc6/x-0.1.0-rc6-linux-amd64"
+      sha256 "689cc4b99c69ba11320136b9686723cad0917cf35e5c80ca1326db94c31c6146"
 
       def install
-        bin.install "x-0.1.0-rc5-linux-amd64" => "x"
+        bin.install "x"
       end
     end
   end
