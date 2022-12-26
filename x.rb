@@ -5,42 +5,42 @@
 class X < Formula
   desc "a simple and fast task runner"
   homepage "https://github.com/bambamboole/x"
-  version "0.1.0-rc8"
+  version "0.1.0-rc9"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/bambamboole/x/releases/download/0.1.0-rc8/x-0.1.0-rc8-darwin-amd64"
-      sha256 "b1ab55703255dbf532c6d3a8ffe4937da5020891332e316aa4e113eb75edd78f"
+    if Hardware::CPU.arm?
+      url "https://github.com/bambamboole/x/releases/download/0.1.0-rc9/x-0.1.0-rc9-darwin-arm64"
+      sha256 "39fd7c2c934fc59bd416c0ee58b026d9384bab5bd81a58d293aace26f7b9fde6"
 
       def install
-        bin.install "x-0.1.0-rc8-darwin-amd64" => "x"
+        bin.install "x-0.1.0-rc9-darwin-arm64" => "x"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/bambamboole/x/releases/download/0.1.0-rc8/x-0.1.0-rc8-darwin-arm64"
-      sha256 "043fa78610d73148b32ccedb31f215a39b6dba08523dd18da164bba0051ddc29"
+    if Hardware::CPU.intel?
+      url "https://github.com/bambamboole/x/releases/download/0.1.0-rc9/x-0.1.0-rc9-darwin-amd64"
+      sha256 "bd6fcd3913e647086536630df9b1b95cb1f98e21aca41d9fd240480dc044e79a"
 
       def install
-        bin.install "x-0.1.0-rc8-darwin-arm64" => "x"
+        bin.install "x-0.1.0-rc9-darwin-amd64" => "x"
       end
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/bambamboole/x/releases/download/0.1.0-rc8/x-0.1.0-rc8-linux-amd64"
-      sha256 "19c676c1661e63957a08c69210b1ed056a22eee74a48d7533de514e4f6553e79"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/bambamboole/x/releases/download/0.1.0-rc9/x-0.1.0-rc9-linux-arm64"
+      sha256 "34aeeed2395d051af18318c5a08185012b1e9e8e060ae8a800c1b49cd82728ad"
 
       def install
-        bin.install "x-0.1.0-rc8-linux-amd64" => "x"
+        bin.install "x-0.1.0-rc9-linux-arm64" => "x"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bambamboole/x/releases/download/0.1.0-rc8/x-0.1.0-rc8-linux-arm64"
-      sha256 "dbba38d2b2ac80d3cd9abe378e8a3bc0074ee983c3d54ab7b011a46fddb13672"
+    if Hardware::CPU.intel?
+      url "https://github.com/bambamboole/x/releases/download/0.1.0-rc9/x-0.1.0-rc9-linux-amd64"
+      sha256 "e82826b20cfb82b570106057e77f5c32e3507182dab7077780e9ba2f0b13bffe"
 
       def install
-        bin.install "x-0.1.0-rc8-linux-arm64" => "x"
+        bin.install "x-0.1.0-rc9-linux-amd64" => "x"
       end
     end
   end
